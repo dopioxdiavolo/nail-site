@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Профиль пользователя{% endblock %}
+
+{% block content %}
+<section class="profile-section py-5" style="background: #faf7fc; min-height: 80vh;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+
+        <div class="card shadow-sm border-0 rounded-4">
+          <div class="card-header bg-gradient text-white text-center rounded-top-4" style="background: linear-gradient(135deg, #b494d1 0%, #8e6cc6 100%);">
+            <h2 class="mb-0 fw-bold">Профиль пользователя</h2>
+          </div>
+
+          <div class="card-body p-5">
+            <div class="text-center mb-4">
+              <img src="{{ url_for('static', filename='img/default_avatar.png') }}" 
+                   alt="Фото профиля" 
+                   class="rounded-circle shadow"
+                   style="width: 140px; height: 140px; object-fit: cover; border: 5px solid #b494d1;">
+            </div>
+
+            <h3 class="text-center text-primary fw-bold mb-4">{{ current_user.username }}</h3>
+
+            <ul class="list-group list-group-flush mb-4" style="font-size: 1.1rem;">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Email:</strong>
+                <span>{{ current_user.email }}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Дата регистрации:</strong>
+                <span>{{ current_user.created_at.strftime('%d.%m.%Y') }}</span>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

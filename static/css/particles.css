@@ -1,0 +1,14 @@
+.striped-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #89f7fe 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, #89f7fe 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, #89f7fe 25%, transparent 25%),
+              linear-gradient(45deg, #89f7fe 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  opacity: 0.1;
+  z-index: -1;
+}

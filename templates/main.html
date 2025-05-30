@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная | KatBeauty - розовый маникюрный салон
+{% endblock %}
+
+{% block content %}
+<div class="main-page">
+  <!-- Герой-баннер в розовых тонах -->
+  <div class="hero-banner position-relative overflow-hidden text-center mb-5">
+    <div class="hero-pink-overlay"></div>
+    <div class="container py-5 position-relative" style="z-index: 2;">
+      <h1 class="display-3 fw-bold text-white mb-4">KatBeauty</h1>
+      <p class="hero-subtitle fs-4 text-white mb-4">Роскошный маникюр в нежно-розовой атмосфере</p>
+      <a href="#services" class="btn btn-light-pink btn-lg px-4 py-2 shadow">Записаться онлайн</a>
+      <div class="hero-sparkles">
+        <i class="bi bi-stars"></i>
+        <i class="bi bi-stars"></i>
+        <i class="bi bi-stars"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Преимущества в розовых тонах -->
+  <div class="container mb-5">
+    <div class="row g-4 text-center">
+      <div class="col-md-3">
+        <div class="benefit-item p-3 rounded-4 bg-pink-light">
+          <i class="bi bi-shield-check fs-1 text-dark-pink"></i>
+          <h3 class="h5 mt-2">Стерильность</h3>
+          <p class="small">Обработка инструментов после каждого клиента</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="benefit-item p-3 rounded-4 bg-pink-light">
+          <i class="bi bi-gem fs-1 text-dark-pink"></i>
+          <h3 class="h5 mt-2">Материалы</h3>
+          <p class="small">Только премиальные бренды</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="benefit-item p-3 rounded-4 bg-pink-light">
+          <i class="bi bi-stars fs-1 text-dark-pink"></i>
+          <h3 class="h5 mt-2">Дизайн</h3>
+          <p class="small">Авторские работы</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="benefit-item p-3 rounded-4 bg-pink-light">
+          <i class="bi bi-heart fs-1 text-dark-pink"></i>
+          <h3 class="h5 mt-2">Комфорт</h3>
+          <p class="small">Уютная атмосфера</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Карточки услуг -->
+  <div class="container mb-5" id="services">
+    <h2 class="text-center mb-4 section-title text-dark-pink">Наши услуги</h2>
+    <div class="row g-4">
+      <!-- Карточка "О нас" -->
+      <div class="col-lg-4">
+        <div class="card service-card h-100 border-0 overflow-hidden shadow-sm">
+          <div class="card-img-top about-img" style="background-image: url('https://example.com/pink-salon.jpg');"></div>
+          <div class="card-body bg-pink-light">
+            <h3 class="card-title text-dark-pink">О салоне</h3>
+            <p class="card-text">Нежно-розовое пространство с атмосферой женственности и уюта, где каждая деталь создает настроение.</p>
+            <a href="{{ url_for('about') }}" class="btn btn-outline-dark-pink">Наша философия</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка "Услуги" -->
+      <div class="col-lg-4">
+        <div class="card service-card h-100 border-0 overflow-hidden shadow-sm">
+          <div class="card-img-top services-img" style="background-image: url('https://example.com/pink-manicure.jpg');"></div>
+          <div class="card-body bg-pink-light">
+            <h3 class="card-title text-dark-pink">Услуги</h3>
+            <p class="card-text">Полный спектр ухода за руками в розовых тонах: от классики до эксклюзивного дизайна.</p>
+            <a href="{{ url_for('services') }}" class="btn btn-outline-dark-pink">Смотреть все</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка "Мастера" -->
+      <div class="col-lg-4">
+        <div class="card service-card h-100 border-0 overflow-hidden shadow-sm">
+          <div class="card-img-top masters-img" style="background-image: url('https://example.com/pink-master.jpg');"></div>
+          <div class="card-body bg-pink-light">
+            <h3 class="card-title text-dark-pink">Команда</h3>
+            <p class="card-text">Наши мастера создадут идеальный розовый маникюр с любовью к деталям.</p>
+            <a href="{{ url_for('doctors') }}" class="btn btn-outline-dark-pink">Знакомство</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Блок с отзывами -->
+  <div class="testimonials py-5 mb-5 bg-pink-very-light">
+    <div class="container">
+      <h2 class="text-center mb-5 section-title text-dark-pink">Отзывы</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="testimonial-card p-4 rounded-4 h-100 bg-white shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-avatar me-3 bg-pink-light"></div>
+              <div>
+                <h4 class="mb-0 text-dark-pink">Анна К.</h4>
+                <div class="rating text-warning">★★★★★</div>
+              </div>
+            </div>
+            <p>"Обожаю этот розовый рай! Маникюр держится безупречно, а атмосфера настолько приятная, что не хочется уходить."</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="testimonial-card p-4 rounded-4 h-100 bg-white shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-avatar me-3 bg-pink-light"></div>
+              <div>
+                <h4 class="mb-0 text-dark-pink">Елена С.</h4>
+                <div class="rating text-warning">★★★★★</div>
+              </div>
+            </div>
+            <p>"Каждый визит - как праздник! Особенно люблю их фирменный розовый дизайн с стразами."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Блок с акцией -->
+  <div class="container mb-5">
+    <div class="promo-banner rounded-4 p-5 text-center position-relative overflow-hidden border-pink">
+      <div class="promo-pink-overlay"></div>
+      <div class="position-relative" style="z-index: 2;">
+        <h2 class="text-white mb-3">Скидка 20% на первый визит!</h2>
+        <p class="text-white mb-4">Оставьте заявку и получите розовый маникюр по специальной цене</p>
+        <button class="btn btn-light-pink btn-lg px-4 shadow">Записаться</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

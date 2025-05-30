@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Каталог процедур
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-5 display-4" style="color: #c48ec4;">Каталог процедур</h1>
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for service in services %}
+        <div class="col">
+            <div class="card h-100 border-0 shadow-lg p-3" style="background-color: #fff0f6; transition: transform 0.3s;">
+                <div class="text-center">
+                    <!-- Используем те же названия фото -->
+                    <img src="{{ url_for('static', filename=service.photo) }}" 
+                         class="rounded-circle shadow-sm" 
+                         alt="{{ service.tittle }}" 
+                         style="width: 160px; height: 160px; object-fit: cover; margin-top: 15px;"
+                         onerror="this.onerror=null; this.src='{{ url_for('static', filename='img/services/default_service.png') }}'">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="color: #b06cbf;">{{ service.tittle }}</h5>
+                    <p class="card-text text-muted">{{ service.description }}</p>
+                    <p class="fw-bold mt-3 fs-5" style="color: #6b4c7d;">{{ "%.2f"|format(service.price) }} ₽</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
